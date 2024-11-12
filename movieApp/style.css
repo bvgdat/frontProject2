@@ -1,0 +1,276 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: rgb(20, 20, 20);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -s-s-s-s-s-s-s-s- */
+/*  START FONT */
+@font-face {
+    font-family: 'quicksand';
+    src: url(fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+/* END FONT */
+/* START HEADER */
+.header{
+    width: 1920px;
+}
+.nav_bar{
+    width: 1650px;
+    height: 70px;
+    position: relative;
+    left: 135px;
+    margin-top: 50px;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__image{
+    width: 70px;
+    height: 60px;
+    padding-left: 30px;
+}
+.nav__image img{
+    width: 70px;
+    height: 60px;
+}
+.nav_bar ul{
+    display: flex;
+    gap: 35px;
+}
+.nav_bar a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: 'quicksand',sans-serif;
+}
+/* search bar */
+.search_bar{
+    width: 400px;
+    height: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid white;
+}
+.search_input, .search_button {
+    height: var(--height);
+    font-family: 'quicksand',sans-serif;
+    border: 0;
+    color: black;
+    font-size: 1.8rem;
+}
+.search_input{
+    outline: 0;
+    width: 300px;
+    background: var(--color-light);
+    z-index: 1;
+    position: relative;
+    color: white;
+    font-family: 'quicksand',sans-serif;
+}
+.search_button{
+    display: flex;
+    position: relative;
+    background: var(--color-brand);
+    color: white;
+    font-family: 'quicksand',sans-serif;
+    cursor: pointer;
+}
+/* END HEADER */
+/* START SECTION */
+.section{
+    width: 1650px;
+    height: 800px;
+    background-color: black;
+    position: relative;
+    left: 135px;
+    margin-top: 30px;
+    display: flex;
+}
+/* row 1 */
+.row_1{
+    width: 650px;
+    height: 800px;
+}
+.action_movies,.fantasy_movies,.drama_movies{
+    width: 650px;
+    height: 800px;
+    display: none;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.movie_1,.movie_2,.movie_3,.movie_4,.movie_5,.movie_6,.movie_7,.movie_8{
+    width: 650px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid white;
+    flex-shrink: 0;
+}
+.movie_1 img,.movie_2 img,.movie_3 img,.movie_4 img,.movie_5 img,.movie_6 img,.movie_7 img,.movie_8 img{
+    width: 150px;
+    height: 100px;
+    padding-left: 50px;
+}
+.title_movie_1 ul,.title_movie_2 ul,.title_movie_3 ul,.title_movie_4 ul,.title_movie_5 ul,.title_movie_6 ul,.title_movie_7 ul,.title_movie_8 ul{
+    width: 300px;
+    height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.title_movie_1 a,.title_movie_2 a,.title_movie_3 a,.title_movie_4 a,.title_movie_5 a,.title_movie_6 a,.title_movie_7 a,.title_movie_8 a{
+    text-decoration: none;
+    font-family: 'quicksand',sans-serif;
+    color: white;
+    font-size: 15px;
+}
+.rating_1,.rating_2,.rating_3,.rating_4,.rating_5,.rating_6,.rating_7,.rating_8{
+    position: relative;
+    top: 50px;
+    text-decoration: none;
+    color: yellow;
+    font-family: 'quicksand',sans-serif;
+}
+/* row 2 */
+.row_2 {
+    width: 1000px;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+.row_2 img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+/* show movies */
+.movie_open_1,.movie_open_2,.movie_open_3,.movie_open_4,.movie_open_5,.movie_open_6,.movie_open_7,.movie_open_8{
+    width: 1000px;
+    height: 800px;
+    display: none;
+    filter: none;
+    flex-direction: column;
+}
+.movie_window_1,.movie_window_2,.movie_window_3,.movie_window_4,.movie_window_5,.movie_window_6,.movie_window_7,.movie_window_8{
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.movie_info_1,.movie_info_2,.movie_info_3,.movie_info_4,.movie_info_5,.movie_info_6,.movie_info_7,.movie_info_8{
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.movie_info_1 ul,.movie_info_2 ul,.movie_info_3 ul,.movie_info_4 ul,.movie_info_5 ul,.movie_info_6 ul,.movie_info_7 ul,.movie_info_8 ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    width: 750px;
+    height: 300px;
+}
+.movie_info_1 a,.movie_info_2 a,.movie_info_3 a,.movie_info_4 a,.movie_info_5 a,.movie_info_6 a,.movie_info_7 a,.movie_info_8 a{
+    font-size: 20px;
+    font-family: 'quicksand',sans-serif;
+    text-decoration: none;
+    color: white;
+}
+/* END SECTION */
+/* START FOOTER */
+.footer{
+    width: 800px;
+    height: 110px;
+    background-color: aqua;
+    display: flex;
+    margin-top: 30px;
+    left: 560px;
+    position: relative;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.footer_img{
+    width: 110px;
+    height: 110px;
+    position: relative;
+    border-top-left-radius: 10px;
+}
+.footer_img img{
+    width: 110px;
+    height: 110px;
+    position: relative;
+    border-top-left-radius: 10px;
+}
+.socials{
+    width: 690px;
+    height: 110px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.socials ul{
+    position: relative;
+    display: flex;
+    gap: 70px;
+}
+.socials a{
+    font-family: 'quicksand',sans-serif;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+.socials a:hover{
+    color: plum;
+}
+/* END FOOTER */
